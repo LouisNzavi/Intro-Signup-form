@@ -1,0 +1,125 @@
+/* basic styling */
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: hsl(0, 100%, 74%);
+  background-image: url(/images/bg-intro-desktop.png);
+}
+
+h1 {
+  color: white;
+  font-size: 30px;
+  font-weight: 25px;
+  font-style: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+}
+
+p {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 10px;
+  color: white;
+}
+
+.sub-para {
+  color: white;
+  font-size: 15px;
+  margin: 10px;
+  padding: 10px;
+}
+
+p-terms {
+  font-size: 5px;
+}
+
+.trial {
+  color: white;
+  background-color: hsl(248, 32%, 49%);
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* form styles */
+
+form {
+  background-color: white;
+  margin: 50px;
+  border-radius: 10px;
+  padding-bottom: 30px;
+  box-shadow: 5px #f0eeee;
+  padding-left: 50px;
+  border-left: 50px;
+}
+
+label,
+input {
+  margin: 10px;
+  border-radius: 5px;
+  padding: 10px;
+  padding-bottom: 5px;
+}
+
+input {
+  padding-bottom: 5px;
+  margin: 10px;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  font-style: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+button {
+  color: white;
+  background-color: hsl(154, 59%, 51%);
+  border-radius: 3px;
+}
+
+input,
+textarea,
+select,
+button {
+  width: 150px;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+i {
+  color: seagreen;
+}
+
+/* aligning the right and left divs side by side*/
+
+.flex-container {
+  display: flex;
+  padding-top: 100px;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.flex-child {
+  flex: 1;
+  border: 2px solid yellow;
+}
+
+.flex-child:first-child {
+  margin-right: 20px;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
