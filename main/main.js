@@ -166,4 +166,22 @@ const checkConfirmPassword = () => {
   return valid;
 };
 
-//8. modify submit event handler
+//8.Instant feedback feature for the form submit
+//using event delegation to attach event listener to form & validate each field based on the current field id:
+
+form.addEventlistener("input", function (e) {
+  switch (e.target.id) {
+    case "username":
+      checkUsername();
+      break;
+    case "email":
+      checkEmail();
+      break;
+    case "password":
+      checkPassword();
+      break;
+    case "confirm-password":
+      checkConfirmPassword();
+      break;
+  }
+});
