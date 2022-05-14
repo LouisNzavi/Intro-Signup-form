@@ -8,9 +8,25 @@ const myform = document.getElementById("myForm");
 
 const myForm = document.getElementById("myForm");
 
-//prevents form from submitting once submit button is clicked.
 myForm.addEventlistener("submit", function (e) {
+  //prevents form from submitting once submit button is clicked.
   e.preventDefault();
+
+  //validate forms
+  let isUsernameValid = checkUsername(),
+    isEmailValid = checkEmail(),
+    isPasswordValid = checkPassword(),
+    isConfirmPasswordValid = checkConfirmPassword();
+
+  let isFormValid =
+    isUsernameValid &&
+    isEmailValid &&
+    isPasswordValid &&
+    isConfirmPasswordValid;
+
+  // submit to the server if the form is valid
+  if (isFormValid) {
+  }
 });
 
 //2. resuable utility functions to check required fields/lenght/validity
@@ -129,3 +145,25 @@ const checkPassword = () => {
 
   return valid;
 };
+
+//7. validate confirm password field
+
+const checkConfirmPassword = () => {
+  let valid = false;
+  // check confirm password
+  const confirmPassword = confirmPasswordEl.value.trim();
+  const password = passwordEl.value.trim();
+
+  if (!isRequired(confirmPassword)) {
+    showError(confirmPasswordEl, "Please enter the password again");
+  } else if (password !== confirmPassword) {
+    showError(confirmPasswordEl, "Confirm password does not match");
+  } else {
+    showSuccess(confirmPasswordEl);
+    valid = true;
+  }
+
+  return valid;
+};
+
+//8. modify submit event handler
