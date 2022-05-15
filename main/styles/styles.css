@@ -21,15 +21,16 @@ h1 {
 
 p {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 10px;
+  font-size: 15px;
   color: white;
 }
 
 .sub-para {
   color: white;
-  font-size: 15px;
+  font-size: 20px;
   margin: 10px;
   padding: 10px;
+  inline-size: auto;
 }
 
 p-terms {
